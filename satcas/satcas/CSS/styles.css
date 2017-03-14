@@ -25,3 +25,8 @@
 .tab-content h1, h2, h3, h4, h5, h6, p{
     margin: 0px 20px 0px 20px;
 }
+
+.btn-temple{
+    color: white;
+    background-color: #9E1B34;
+}
