@@ -15,9 +15,9 @@ namespace satcas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            StudentList.Add(new Student("914967942", "Kenny", "Le", "CS", "Pending"));
-            StudentList.Add(new Student("915966942", "Ryan", "Chang", "ENG", "Pending"));
-            StudentList.Add(new Student("915366942", "Tommy", "Tran", "Business", "Pending"));
+            StudentList.Add(new Student("914967942", "Kenny", "Le", "CS", "Pending", ""));
+            StudentList.Add(new Student("915966942", "Ryan", "Chang", "ENG", "Pending",""));
+            StudentList.Add(new Student("915366942", "Tommy", "Tran", "Business", "Pending", ""));
             gvStudentList.DataSource = StudentList;
             gvStudentList.DataBind();
 

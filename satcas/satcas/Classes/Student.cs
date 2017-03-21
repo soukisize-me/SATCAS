@@ -7,15 +7,16 @@ namespace satcas.Classes
 {
     public class Student
     {
-        private String tuid, firstName, lastName, college, status;
+        private String tuid, firstName, lastName, college, status, type;
 
-        public Student(String TUid, String FirstName, String LastName, String College, String Status)
+        public Student(String TUid, String FirstName, String LastName, String College, String Status, String Type)
         {
             tuid = TUid;
             firstName = FirstName;
             lastName = LastName;
             college = College;
             status = Status;
+            type = Type;
         }
 
         public String TUid
@@ -41,6 +42,11 @@ namespace satcas.Classes
         public String Status
         {
             get { return status; }
+        }
+
+        public String Type
+        {
+            get { return type; }
         }
     }
 }

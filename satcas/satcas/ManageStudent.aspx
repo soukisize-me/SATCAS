@@ -27,12 +27,11 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div style="float: right; padding-right: 20px; overflow: auto">
+                <div style="float: right; padding-right: 20px">
                     <asp:Button ID="btnDashboard" runat="server" Text="Dashboard" Width="120px" Height="40px" CssClass="btn btn-temple" />
-                    <asp:Button runat="server" Text="Find A Course" Width="120px" Height="40px" ID="btnFindCourse" CssClass="btn btn-temple" />
-                    <asp:Button ID="btnAddCourse" runat="server" Text="Add A Course" Width="120px" Height="40px" CssClass="btn btn-temple" />
-                    <asp:Button ID="btnRoster" runat="server" Text="Roster" Width="120px" Height="40px" CssClass="btn btn-temple" />
-                    <asp:Button ID="btnLogout" runat="server" Text="Logout" Width="120px" Height="40px" CssClass="btn btn-temple" />
+                    <asp:Button runat="server" Text="Manage User" Width="120px" Height="40px" ID="btnFindCourse" CssClass="btn btn-temple" />
+                    <asp:Button ID="btnAddCourse" runat="server" Text="Manage Student" Width="130px" Height="40px" CssClass="btn btn-temple" />
+                    <asp:Button ID="btnRoster" runat="server" Text="Logout" Width="120px" Height="40px" CssClass="btn btn-temple" />
                 </div>
             </div>
         </div>
@@ -74,7 +73,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="tab">
-                    <h5>User Record</h5>
+                    <h5>Student Record</h5>
                     <div class="tab-content" style="padding-left: 40px; overflow: auto">
                         <br />
                         <asp:GridView ID="gvStudent" runat="server" AutoGenerateColumns="False">
@@ -95,12 +94,19 @@
                                     <HeaderStyle CssClass="text-center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
                                     <ItemStyle HorizontalAlign="Center" />
                                 </asp:BoundField>
-                                <asp:TemplateField HeaderText="View">
+                                <asp:TemplateField HeaderText="Student">
                                     <ItemTemplate>
-                                        <asp:Button ID="btnView" runat="server" Text="Student Information" />
+                                        <asp:Button ID="Button2" runat="server" Text="View" />
                                     </ItemTemplate>
-                                    <HeaderStyle CssClass="text-center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
+                                    <HeaderStyle BackColor="#9E1B34" CssClass="text-center" ForeColor="White" Width="75px" />
                                     <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Application">
+                                    <ItemTemplate>
+                                        <asp:Button ID="btnView" runat="server" Text="View" />
+                                    </ItemTemplate>
+                                    <HeaderStyle CssClass="text-center" Width="100px" BackColor="#9E1B34" ForeColor="White" />
+                                    <ItemStyle HorizontalAlign="Center" Width="100px" />
                                 </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
@@ -112,17 +118,17 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="tab">
-                    <h5>User Status</h5>
+                    <h5>Student Status</h5>
                     <div class="tab-content">
                         <br />
                         <div class="row">
                             <div class="col-md-1 col-md-offset-1">
-                                First Name: 
+                                TUid: 
                             </div>
                             <div class="col-md-1">
-                                Kenny
+                                91293239
                             </div>
-                            <div class="col-md-1 col-md-offset-1">
+                            <div class="col-md-2 col-md-offset-1">
                                 Application Status:
                             </div>
                             <div class="col-md-1 ">
@@ -135,16 +141,16 @@
                         <br />
                         <div class="row">
                             <div class="col-md-1 col-md-offset-1">
-                                Last Name: 
+                                First Name: 
                             </div>
                             <div class="col-md-1">
-                                Le
+                                Kenny
                             </div>
-                            <div class="col-md-1 col-md-offset-1">
+                            <div class="col-md-2 col-md-offset-1">
                                 View Application
                             </div>
                             <div class="col-md-1 ">
-                                <asp:Button ID="Button1" runat="server" Text="View" CssClass="btn btn-temple" />
+                                <asp:Button ID="Button1" runat="server" Text="View" CssClass="btn btn-temple" Font-Size="Smaller" Height="25px" />
                             </div>
                             <div class="col-md-1 col-md-offset-3">
                                 <asp:DropDownList ID="DropDownList1" runat="server" CssClass="ddl">
@@ -156,10 +162,10 @@
                         <br />
                         <div class="row">
                             <div class="col-md-1 col-md-offset-1">
-                                TUID:
+                                Last Name:
                             </div>
                             <div class="col-md-1">
-                                91293239
+                                Le
                             </div>
                         </div>
                         <br />
@@ -167,8 +173,8 @@
                             <div class="col-md-1 col-md-offset-1">
                                 Role:
                             </div>
-                            <div class="col-md-1">
-                                Faculty Advisor
+                            <div class="col-md-2">
+                                Student
                             </div>
                             <div class="col-md-1 col-md-offset-6">
                                 <button type="submit" class="btn btn-primary" style="width: 120px">Submit</button>

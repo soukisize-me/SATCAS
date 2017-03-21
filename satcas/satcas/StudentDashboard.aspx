@@ -29,7 +29,7 @@
             <div class="col-md-12">
                 <div style="float: right; padding-right: 20px; overflow: auto">
                     <asp:Button ID="btnDashboard" runat="server" Text="Dashboard" Width="120px" Height="40px" CssClass="btn btn-temple" />
-                    <asp:Button runat="server" Text="Find A Course" Width="120px" Height="40px" ID="btnFindCourse" CssClass="btn btn-temple" />
+                    <asp:Button runat="server" Text="Search Approved Courses" Width="200px" Height="40px" ID="btnFindCourse" CssClass="btn btn-temple" />
                     <asp:Button ID="btnAddCourse" runat="server" Text="Add A Course" Width="120px" Height="40px" CssClass="btn btn-temple" />
                     <asp:Button ID="btnRoster" runat="server" Text="Roster" Width="120px" Height="40px" CssClass="btn btn-temple" />
                     <asp:Button ID="btnLogout" runat="server" Text="Logout" Width="120px" Height="40px" CssClass="btn btn-temple" />
@@ -54,25 +54,6 @@
                                         If you have any question please feel free to contact mim@temple.edu.
                                     </p>
                                 </div>
-                                <br />
-                                <div class="tab" style="color: black; background-color: white">
-                                    <h4 style="font-weight: bolder">Search for a Course: Fall 2017</h4>
-                                    <div class="row">
-                                        <div class="col-md-11 col-md-offset-1">
-                                            <p>To search an already approved course - <a href="#">Click here</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="tab" style="color: black; background-color: white">
-                                    <h4 style="font-weight: bolder">Add a Course: Fall 2017</h4>
-                                    <div class="row">
-                                        <div class="col-md-11 col-md-offset-1">
-                                            <p>To add a course you wish to be approved - <a href="#">Click here</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
                                 <div class="tab" style="color: black; background-color: white">
                                     <h4 style="font-weight: bolder">Course Roster: Fall 2017</h4>
                                     <br />
@@ -112,6 +93,23 @@
                                         <br />
                                     </div>
                                 </div>
+                                <div class="tab" style="color: black; background-color: white">
+                                    <h4 style="font-weight: bolder">Search for a Course: Fall 2017</h4>
+                                    <div class="row">
+                                        <div class="col-md-11 col-md-offset-1">
+                                            <p>To search an already approved course - <a href="#">Click here</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab" style="color: black; background-color: white">
+                                    <h4 style="font-weight: bolder">Add a Course: Fall 2017</h4>
+                                    <div class="row">
+                                        <div class="col-md-11 col-md-offset-1">
+                                            <p>To add a course you wish to be approved - <a href="#">Click here</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
                             </div>
                         </div>
                     </div>
