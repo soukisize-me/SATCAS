@@ -31,7 +31,7 @@
             <div class="col-md-12">
                 <div style="float: right; padding-right: 20px">
                     <asp:Button ID="btnDashboard" runat="server" Text="Dashboard" Width="120px" Height="40px" CssClass="btn btn-temple" />
-                    <asp:Button runat="server" Text="Find A Course" Width="120px" Height="40px" ID="btnFindCourse" CssClass="btn btn-temple" />
+                    <asp:Button runat="server" Text="Search Approved Courses" Width="200px" Height="40px" ID="btnFindCourse" CssClass="btn btn-temple" />
                     <asp:Button ID="btnAddCourse" runat="server" Text="Add A Course" Width="120px" Height="40px" CssClass="btn btn-temple" />
                     <asp:Button ID="btnRoster" runat="server" Text="Roster" Width="120px" Height="40px" CssClass="btn btn-temple" />
                     <asp:Button ID="btnLogout" runat="server" Text="Logout" Width="120px" Height="40px" CssClass="btn btn-temple" />
@@ -45,7 +45,15 @@
                     <div class="tab-content" style="padding-left: 10px; padding-right: 10px">
                         <br /><br />
                         <div class="row">
-                            <div class="col-md-4 col-md-offset-1" style="padding-top: 10px">
+                            <div class="col-md-3 col-md-offset-1" style="padding-top: 10px">
+                                <asp:Label ID="Label3" runat="server" Text="Find Institution: " Font-Bold="True"></asp:Label>&nbsp
+                                <asp:DropDownList ID="DropDownList3" runat="server" CssClass="ddl">
+                                    <asp:ListItem>University of Paris</asp:ListItem>
+                                    <asp:ListItem>Arcadia University</asp:ListItem>
+                                    <asp:ListItem>Yonsei University</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                            <div class="col-md-4" style="padding-top: 10px">
                                 <asp:Label ID="Label2" runat="server" Text="Find Department: " Font-Bold="True"></asp:Label>&nbsp
                                 <asp:DropDownList ID="DropDownList2" runat="server" CssClass="ddl">
                                     <asp:ListItem>Computer Information Science</asp:ListItem>
@@ -53,16 +61,6 @@
                                     <asp:ListItem>Kinesiology</asp:ListItem>
                                     <asp:ListItem>English</asp:ListItem>
                                     <asp:ListItem>Psychology</asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
-                            <div class="col-md-3" style="padding-top: 10px">
-                                <asp:Label ID="Label3" runat="server" Text="Find University: " Font-Bold="True"></asp:Label>&nbsp
-                                <asp:DropDownList ID="DropDownList3" runat="server" CssClass="ddl">
-                                    <asp:ListItem>University of Paris</asp:ListItem>
-                                    <asp:ListItem>Data</asp:ListItem>
-                                    <asp:ListItem>Data</asp:ListItem>
-                                    <asp:ListItem>Data</asp:ListItem>
-                                    <asp:ListItem>Data</asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-2" style="padding-top: 10px">
@@ -97,20 +95,24 @@
                                         <HeaderStyle CssClass="text-center" HorizontalAlign="Center" Width="60px" BackColor="#9E1B34" ForeColor="White" />
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:TemplateField>
-                                    <asp:BoundField HeaderText="Title" DataField="Title">
-                                        <HeaderStyle CssClass="text-center" HorizontalAlign="Center" Width="450px" BackColor="#9E1B34" ForeColor="White" />
+                                    <asp:BoundField HeaderText="Institution" DataField="Institution">
+                                        <HeaderStyle CssClass="text-center" HorizontalAlign="Center" Width="400px" BackColor="#9E1B34" ForeColor="White" />
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:BoundField>
-                                    <asp:BoundField HeaderText="Course Number" DataField="CourseNumber">
-                                        <HeaderStyle CssClass="text-center" HorizontalAlign="Center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
-                                        <ItemStyle HorizontalAlign="Center" />
+                                    <asp:BoundField DataField="College" HeaderText="College">
+                                    <HeaderStyle BackColor="#9E1B34" CssClass="text-center" ForeColor="White" Width="300px" />
+                                    <ItemStyle HorizontalAlign="Center" />
                                     </asp:BoundField>
                                     <asp:BoundField HeaderText="Department" DataField="Department">
                                         <HeaderStyle CssClass="text-center" HorizontalAlign="Center" Width="100px" BackColor="#9E1B34" ForeColor="White" />
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:BoundField>
-                                    <asp:BoundField HeaderText="Institution" DataField="Institution">
-                                        <HeaderStyle CssClass="text-center" HorizontalAlign="Center" Width="400px" BackColor="#9E1B34" ForeColor="White" />
+                                    <asp:BoundField HeaderText="Course #" DataField="CourseNumber">
+                                        <HeaderStyle CssClass="text-center" HorizontalAlign="Center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
+                                        <ItemStyle HorizontalAlign="Center" />
+                                    </asp:BoundField>
+                                    <asp:BoundField HeaderText="Title" DataField="Title">
+                                        <HeaderStyle CssClass="text-center" HorizontalAlign="Center" Width="450px" BackColor="#9E1B34" ForeColor="White" />
                                         <ItemStyle HorizontalAlign="Center" />
                                     </asp:BoundField>
                                     <asp:TemplateField HeaderText="View">

@@ -58,9 +58,17 @@
                                             <HeaderStyle CssClass="text-center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
                                             <ItemStyle HorizontalAlign="Center" />
                                         </asp:BoundField>
-                                        <asp:BoundField DataField="FirstName" HeaderText="Name">
+                                        <asp:BoundField DataField="FirstName" HeaderText="First Name">
                                             <HeaderStyle CssClass="text-center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
                                             <ItemStyle HorizontalAlign="Center" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="LastName" HeaderText="Last Name">
+                                        <HeaderStyle BackColor="#9E1B34" CssClass="text-center" ForeColor="White" HorizontalAlign="Center" Width="150px" />
+                                        <ItemStyle HorizontalAlign="Center" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="Type" HeaderText="User Type">
+                                        <HeaderStyle BackColor="#9E1B34" CssClass="text-center" ForeColor="White" Width="200px" />
+                                        <ItemStyle HorizontalAlign="Center" />
                                         </asp:BoundField>
                                         <asp:BoundField DataField="College" HeaderText="College">
                                             <HeaderStyle CssClass="text-center" Width="350px" BackColor="#9E1B34" ForeColor="White" />
@@ -70,6 +78,13 @@
                                             <HeaderStyle CssClass="text-center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
                                             <ItemStyle HorizontalAlign="Center" />
                                         </asp:BoundField>
+                                        <asp:TemplateField HeaderText="View">
+                                            <ItemTemplate>
+                                                <asp:Button ID="Button6" runat="server" Text="Edit" />
+                                            </ItemTemplate>
+                                            <HeaderStyle BackColor="#9E1B34" CssClass="text-center" ForeColor="White" Width="75px" />
+                                            <ItemStyle HorizontalAlign="Center" />
+                                        </asp:TemplateField>
                                     </Columns>
                                 </asp:GridView>
                                 <br />
@@ -126,13 +141,17 @@
                                             <HeaderStyle CssClass="text-center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
                                             <ItemStyle HorizontalAlign="Center" />
                                         </asp:BoundField>
-                                        <asp:BoundField DataField="College" HeaderText="Term">
+                                        <asp:BoundField DataField="College" HeaderText="College">
                                             <HeaderStyle CssClass="text-center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
                                             <ItemStyle HorizontalAlign="Center" />
                                         </asp:BoundField>
-                                        <asp:BoundField DataField="Status" HeaderText="Status">
+                                        <asp:BoundField DataField="Status" HeaderText="Student Status">
                                             <HeaderStyle CssClass="text-center" Width="150px" BackColor="#9E1B34" ForeColor="White" />
                                             <ItemStyle HorizontalAlign="Center" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="Type" HeaderText="Application Status">
+                                        <HeaderStyle BackColor="#9E1B34" CssClass="text-center" ForeColor="White" Width="200px" />
+                                        <ItemStyle HorizontalAlign="Center" />
                                         </asp:BoundField>
                                         <asp:TemplateField HeaderText="More Information">
                                             <ItemTemplate>
